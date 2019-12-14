@@ -9,12 +9,12 @@ conflict :-
 	Com_X1 = Com_X2,
 	Com_Y1 = Com_Y2,
 	\+ K1 = K2,
-	write("Conflict Type 1"), nl, write(ID1), nl, write(ID2).
+	write("Conflict Type 1"), nl, write(ID1), nl, write(ID2);
 
 
 % A 是 B 的第5大供应商，交易额 xxx
 % A 是 B 的第5大供应商，交易额 yyy
-conflict :- 
+%conflict :- 
 	supplier(ID1, Time_ignored, Com_X1, Com_Y1, K1, Value1),
 	supplier(ID2, Time_ignored, Com_X2, Com_Y2, K2, Value2),
 	Com_X1 = Com_X2,
