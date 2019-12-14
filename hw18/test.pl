@@ -20,7 +20,7 @@ conflict2 :-
 	Com_X1 = Com_X2,
 	Com_Y1 = Com_Y2,
 	K1 = K2,
-	\+ Value1 = Value1,
+	\+ Value1 = Value2,
 	write("Conflict Type 2"), nl, write(ID1), nl, write(ID2).
 
 conflicts :- 
