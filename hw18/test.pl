@@ -8,7 +8,7 @@ conflict :-
 	supplier(ID2, Time_ignored, Com_X2, Com_Y2, K2, Value2),
 	Com_X1 = Com_X2,
 	Com_Y1 = Com_Y2,
-	\+ K1 = K2，
+	\+ K1 = K2,
 	write(ID1), nl, write(ID2).
 
 /*
