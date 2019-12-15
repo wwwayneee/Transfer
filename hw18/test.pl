@@ -2,10 +2,10 @@ supplier(4099, 2018, com24, com19, 4, 190).
 supplier(4100, 2018, com32, com33, 11, 123).%干扰项
 supplier(4101, 2018, com24, com19, 5, 240).
 client(4102, 2018, com19, com24, 6, 245).
-client(4102, 2018, com34, com56, 10, 245).% test for conflict 4
-client(4102, 2018, com34, com56, 11, 245).% test for conflict 4
-client(4102, 2018, com37, com59, 14, 567).% test for conflict 5
-client(4102, 2018, com37, com59, 14, 578).% test for conflict 5
+client(4103, 2018, com34, com56, 10, 245).% test for conflict 4
+client(4104, 2018, com34, com56, 11, 245).% test for conflict 4
+client(4105, 2018, com37, com59, 14, 567).% test for conflict 5
+client(4106, 2018, com37, com59, 14, 578).% test for conflict 5
 
 % A 是 B 的第5大供应商
 % A 是 B 的第4大供应商
