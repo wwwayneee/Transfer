@@ -1,6 +1,7 @@
 supplier(4099, 2018, com24, com19, 4, 190).
-supplier(4100, 2018, com24, com19, 5, 240).
-client(4101, 2018, com19, com24, 6, 245).
+supplier(4100, 2018, com32, com33, 11, 123).%干扰项
+supplier(4101, 2018, com24, com19, 5, 240).
+client(4102, 2018, com19, com24, 6, 245).
 
 % A 是 B 的第5大供应商
 % A 是 B 的第4大供应商
