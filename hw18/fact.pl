@@ -43969,10 +43969,12 @@ client(43968, 2018, com4000, com3996, 4, 39966).
 client(43969, 2018, com3998, com3997, 1, 39979).
 client(43970, 2018, com3999, com3997, 2, 39978).
 client(43971, 2018, com4000, com3997, 3, 39977).
-client(43972, 2018, com3999, com3998, 1, 39989).
+client(43972, 2018, com3999, com3998, 1, 39987).
 client(43973, 2018, com4000, com3998, 2, 39988).
 client(43974, 2018, com4000, com3999, 1, 39999).
 
+
+% 这个测试不是origin！我已经修改过了！原来的见 fact2.pl
 % A 是 B 的第5大供应商
 % A 是 B 的第4大供应商
 conflict1 :- 
@@ -44052,6 +44054,16 @@ conflict7 :-
 	Value1 < Value2,
 	write("Conflict Type 7"), nl, write(ID1), nl, write(ID2).
 
+%is_relation中同一个公司amount有两个值
+conflict8 :- 
+	is_relation(ID1, Com_X1, Time1, Amount_ignored, Value1),
+	is_relation(ID2, Com_X2, Time2, Amount_ignored, Value2),
+	Com_X1 = Com_X2,
+	Time1 = Time2,
+	\+ Value1 = Value2,
+	ID2 > ID1,
+	write("Conflict Type 8"), nl, write(ID1), nl, write(ID2).
+
 conflicts :- 
 	conflict1;
 	conflict2;
@@ -44059,4 +44071,6 @@ conflicts :-
 	conflict4;
 	conflict5;
 	conflict6;
-	conflict7.
+	conflict7;
+	conflict8.
+
