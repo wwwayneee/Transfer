@@ -1,4 +1,4 @@
-%supplier(4099, 2018, com24, com19, 5, 190).
+supplier(4099, 2018, com24, com19, 5, 190).
 supplier(4100, 2018, com24, com19, 5, 240).
 client(4101, 2018, com19, com24, 6, 245).
 
@@ -21,6 +21,7 @@ conflict2 :-
 	Com_X1 = Com_X2,
 	Com_Y1 = Com_Y2,
 	K1 = K2,
+	ID1 > ID2,
 	\+ Value1 = Value2,
 	write("Conflict Type 2"), nl, write(ID1), nl, write(ID2).
 
