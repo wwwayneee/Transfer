@@ -1,6 +1,6 @@
-supplier(4099, 2018, com24, com19, 5, 190).
+supplier(4099, 2018, com24, com19, 4, 190).
 supplier(4100, 2018, com24, com19, 5, 240).
-client(4101, 2018, com19, com24, 6, 245).
+%client(4101, 2018, com19, com24, 6, 245).
 
 % A 是 B 的第5大供应商
 % A 是 B 的第4大供应商
@@ -9,6 +9,7 @@ conflict1 :-
 	supplier(ID2, Time_ignored, Com_X2, Com_Y2, K2, Value2),
 	Com_X1 = Com_X2,
 	Com_Y1 = Com_Y2,
+	ID1 > ID2,
 	\+ K1 = K2,
 	write("Conflict Type 1"), nl, write(ID1), nl, write(ID2).
 
