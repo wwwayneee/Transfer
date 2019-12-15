@@ -101,6 +101,7 @@ conflict8 :-
 	Com_X1 = Com_X2,
 	Time1 = Time2,
 	\+ Value1 = Value2,
+	ID2 > ID1,
 	write("Conflict Type 8"), nl, write(ID1), nl, write(ID2).
 
 conflicts :- 

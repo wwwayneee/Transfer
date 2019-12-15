@@ -44052,6 +44052,16 @@ conflict7 :-
 	Value1 < Value2,
 	write("Conflict Type 7"), nl, write(ID1), nl, write(ID2).
 
+%is_relation中同一个公司amount有两个值
+conflict8 :- 
+	is_relation(ID1, Com_X1, Time1, Amount_ignored, Value1),
+	is_relation(ID2, Com_X2, Time2, Amount_ignored, Value2),
+	Com_X1 = Com_X2,
+	Time1 = Time2,
+	\+ Value1 = Value2,
+	ID2 > ID1,
+	write("Conflict Type 8"), nl, write(ID1), nl, write(ID2).
+
 conflicts :- 
 	conflict1;
 	conflict2;
@@ -44059,4 +44069,6 @@ conflicts :-
 	conflict4;
 	conflict5;
 	conflict6;
-	conflict7.
+	conflict7;
+	conflict8.
+
