@@ -10,6 +10,9 @@ supplier(4107, 2018, com24, com19, 4, 191).	% test for conflict 6
 supplier(4108, 2018, com25, com19, 5, 239).	% test for conflict 6
 client(4109, 2018, com41, com67, 12, 567).	% test for conflict 5
 client(4110, 2018, com43, com67, 14, 578).	% test for conflict 5
+is_relation(27, com27, 2018, amount, 158).	% test for conflict 8
+is_relation(29, com29, 2018, amount, 366400).%干扰项
+is_relation(28, com27, 2018, amount, 999).	% test for conflict 8
 
 
 % A 是 B 的第5大供应商
@@ -91,6 +94,15 @@ conflict7 :-
 	Value1 < Value2,
 	write("Conflict Type 7"), nl, write(ID1), nl, write(ID2).
 
+%is_relation中同一个公司amount有两个值
+conflict8 :- 
+	is_relation(ID1, Com_X1, Time1, Amount_ignored, Value1),
+	is_relation(ID2, Com_X2, Time2, Amount_ignored, Value2),
+	Com_X1 = Com_X2,
+	Time1 = Time2,
+	\+ Value1 = Value2,
+	write("Conflict Type 8"), nl, write(ID1), nl, write(ID2).
+
 conflicts :- 
 	conflict1;
 	conflict2;
@@ -98,5 +110,6 @@ conflicts :-
 	conflict4;
 	conflict5;
 	conflict6;
-	conflict7.
+	conflict7;
+	conflict8.
 
